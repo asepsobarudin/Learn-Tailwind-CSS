@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potrofolio | Asep Sobarudin</title>
+
+    <link rel="icon" href="assets/image/document-text-outline.svg">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="dist/css/style.css" />
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- End Icons -->
+    
+  </head>
+
+  <body class="body">
+    <div class="bodyContainer">
+
+      <!-- Button Dark Mode -->
+      <div class="darkModeContainer">
+        <label
+          for="dark-mode"
+          class="iconDarkMode"
+          role="button"
+          tabindex="0"
+          id="labelDarkMode"
+        >
+          <input type="checkbox" id="dark-mode" class="hidden" />
+          <ion-icon name="sunny-outline" class="sun" id="sun"></ion-icon>
+
+          <ion-icon name="moon-outline" class="moon" id="moon"></ion-icon>
+        </label>
+      </div>
+      <!-- End Button Dark Mode -->
+
+      <!-- Profile Info -->
+      <div class="containerProfile">
+        <div class="containerImageProfile">
+          <img
+            src="assets/image/Profile.jpg"
+            alt="Profile-Image"
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="containerProfileText">
+          <h1 class="profileName">Asep Sobarudin</h1>
+          <p class="workProfile">Software Developer</p>
+
+          <div class="mx-auto mt-4 flex">
+            <a
+              href="https://github.com/asepsobarudin"
+              class="contanctProfile"
+              target="_blank"
+            >
+              <ion-icon name="logo-github" class="contactLogo"></ion-icon>
+            </a>
+
+            <a
+              href="https://www.instagram.com/_oby.id/"
+              class="contanctProfile"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram" class="contactLogo"> </ion-icon>
+            </a>
+
+            <a
+              href="#"
+              class="contanctProfile"
+              onclick="BoxAlert('LikedIn not available!')"
+            >
+              <ion-icon name="logo-linkedin" class="contactLogo"></ion-icon>
+            </a>
+
+            <a
+              href="mailto:asepsobarudin066@gmail.com"
+              class="contanctProfile"
+              target="_blank"
+            >
+              <ion-icon name="mail-outline" class="contactLogo"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Profile Info -->
+
+      <!-- Profile Facts -->
+      <div class="profileFacts">
+        <div class="FactsText">
+          <h1 class="FactsNumber">3</h1>
+          <p class="FactsTextP">Years of work exprerice</p>
+        </div>
+        <div class="FactsText">
+          <h1 class="FactsNumber">10+</h1>
+          <p class="FactsTextP">Complated Project</p>
+        </div>
+        <div class="FactsText">
+          <h1 class="FactsNumber">12+</h1>
+          <p class="FactsTextP">Personal side Project</p>
+        </div>
+      </div>
+      <!-- End Profile Facts -->
+
+      <!-- Profile Button -->
+      <div class="profileButtonContainer">
+        <a
+          href="#"
+          onclick="BoxAlert('CV not available!')"
+          class="profileButton"
+        >
+          <span class="profileButtonText dark:text-slate-800 font-medium"
+            >Download CV</span
+          >
+          <ion-icon
+            name="download-outline"
+            class="profileButtonIcon"
+          ></ion-icon>
+        </a>
+
+        <label
+          for="contactTab"
+          class="profileButton contactButton"
+          role="button"
+          tabindex="0"
+          id="contactTabLabel"
+        >
+          <input type="checkbox" id="contactTab" class="hidden" />
+          <span class="profileButtonText select-none">Contact Me</span>
+          <ion-icon name="call-outline" class="profileButtonIcon"></ion-icon>
+        </label>
+      </div>
+      <!-- End Profile Button -->
+
+      <!-- Contact -->
+      <div class="contactTab" id="contactContent">
+        <h1 class="my-4 text-3xl font-semibold text-center dark:text-white">
+          Get In Touch
+        </h1>
+        <div class="w-auto flex flex-wrap gap-4 justify-center p-4 rounded-md">
+          <!-- Contact Message -->
+          <div class="containerContact">
+            <form action="#">
+              <label for="name" class="my-5 block">
+                <span class="text-base md:text-lg font-medium">Name</span>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="name..."
+                  class="contactMessage"
+                  required
+                />
+              </label>
+
+              <label for="email" class="my-5 block">
+                <span class="text-base md:text-lg font-medium">Email</span>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@example.com"
+                  class="contactMessage"
+                  required
+                />
+              </label>
+
+              <label for="message" class="my-5 block">
+                <span class="text-base md:text-lg font-medium">Message</span>
+                <textarea
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  placeholder="message..."
+                  class="contactMessage"
+                  required
+                ></textarea>
+              </label>
+
+              <div class="flex justify-end">
+                <label
+                  for="send"
+                  class="flex justify-center items-center py-2 px-5 bg-yellow-300 hover:bg-yellow-400 ease-in-out duration-300 rounded-full dark:text-slate-800 font-medium mt-2 shadow-md"
+                >
+                  <input
+                    type="submit"
+                    value="Send"
+                    id="send"
+                    class="mr-2"
+                    onclick="BoxAlert('Send message not available!')"
+                  />
+                  <ion-icon name="send-outline" class="text-xl"></ion-icon>
+                </label>
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Message -->
+
+          <!-- Contact Info -->
+          <div class="containerContact">
+            <div>
+              <h1 class="pl-[35px] font-medium text-lg">Contanct Info</h1>
+
+              <span
+                class="block h-0.5 bg-slate-700 dark:bg-slate-400 my-3"
+              ></span>
+
+              <p class="my-2 pl-[35px]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                perspiciatis amet placeat odio dolorem repudiandae unde iure,
+                tempora quos obcaecati?
+              </p>
+
+              <div class="flex items-start my-3">
+                <ion-icon
+                  name="location-outline"
+                  class="text-[30px] w-[30px] mr-2"
+                ></ion-icon>
+                <p class="w-full">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium, omnis.
+                </p>
+              </div>
+
+              <div class="flex items-center my-3">
+                <ion-icon
+                  name="mail-outline"
+                  class="text-[30px] w-[30px] mr-2"
+                ></ion-icon>
+                <a href="mailto:asepsobarudin066@gmail.com" class="w-full"
+                  >asepsobarudin066@gmail.com</a
+                >
+              </div>
+
+              <div class="flex items-center my-3">
+                <ion-icon
+                  name="phone-portrait-outline"
+                  class="text-[30px] w-[30px] mr-2"
+                ></ion-icon>
+                <a href="tel:+62 822 xxxx xxxx" class="w-full"
+                  >+62 822 xxxx xxxx</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Contact Info -->
+        </div>
+      </div>
+      <!-- End Contanct -->
+
+      <!-- Tabs Button -->
+      <div class="tabsButtonContainer">
+        <div class="tabsButton">
+          <label
+            for="portofolio"
+            id="portofolioLabel"
+            class="labelTabs"
+            role="button"
+            tabindex="0"
+          >
+            <input type="checkbox" id="portofolio" class="hidden" checked />
+            Portofolio
+          </label>
+
+          <label
+            for="skils"
+            id="skilsLabel"
+            class="labelTabs"
+            role="button"
+            tabindex="0"
+          >
+            <input type="checkbox" id="skils" class="hidden" />
+            Skils
+          </label>
+        </div>
+      </div>
+      <!-- End Tabs Button -->
+
+      <!-- Tabs Content -->
+      <div class="flex justify-center items-center my-5">
+        <!-- Portofolio -->
+        <div class="tabsContent" id="portofolioContent">
+          <div class="containerTabs">
+            <div class="containerContent group">
+              <div class="containerContentImage group">
+                <img
+                  src="https://source.unsplash.com/random/900×700/?programing"
+                  alt="Programing"
+                  class="imageContent"
+                />
+              </div>
+              <div class="textContainer">
+                <h1 class="titleContent">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+                  explicabo?
+                </h1>
+                <a href="#" class="buttonContent">See More</a>
+              </div>
+            </div>
+
+            <div class="containerContent group">
+              <div class="containerContentImage group">
+                <img
+                  src="https://source.unsplash.com/random/900×700/?coding"
+                  alt="Programing"
+                  class="imageContent"
+                />
+              </div>
+              <div class="textContainer">
+                <h1 class="titleContent">Lorem, ipsum dolor.</h1>
+                <a href="#" class="buttonContent">See More</a>
+              </div>
+            </div>
+
+            <div class="containerContent group">
+              <div class="containerContentImage group">
+                <img
+                  src="https://source.unsplash.com/random/900×700/?programing"
+                  alt="Programing"
+                  class="imageContent"
+                />
+              </div>
+              <div class="textContainer">
+                <h1 class="titleContent">Lorem ipsum dolor sit amet.</h1>
+                <a href="#" class="buttonContent">See More</a>
+              </div>
+            </div>
+
+            <div class="containerContent group">
+              <div class="containerContentImage group">
+                <img
+                  src="https://source.unsplash.com/random/900×700/?coding"
+                  alt="Programing"
+                  class="imageContent"
+                />
+              </div>
+              <div class="textContainer">
+                <h1 class="titleContent">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Totam eum iusto sit ab quaerat enim.
+                </h1>
+                <a href="#" class="buttonContent">See More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Portofolio -->
+
+        <!-- And -->
+
+        <!-- Skils -->
+        <div class="tabsContent" id="skilsContent">
+          <div class="containerTabs">
+            <!-- Language -->
+            <div class="containerSkils">
+              <h1 class="skilsTitle">Language</h1>
+              <span class="skilsLine"></span>
+
+              <div class="mt-4 text-md">
+                <div class="my-2 mx-5">
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/Javascript.png"
+                      alt="Javascript"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">Javascript</span>
+                  </div>
+
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/php.png"
+                      alt="PHP"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">PHP</span>
+                  </div>
+
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/dart.png"
+                      alt="Dart"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">Dart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Language -->
+
+            <!-- Framework -->
+            <div class="containerSkils">
+              <h1 class="skilsTitle">Framework</h1>
+              <span class="skilsLine"></span>
+              <div class="mt-4 text-md">
+                <div class="my-2 mx-5">
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/react.png"
+                      alt="React JS"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">React JS</span>
+                  </div>
+
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/Javascript.png"
+                      alt="Flutter"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">Express JS</span>
+                  </div>
+
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/Laravel.png"
+                      alt="Laravel"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">Laravel</span>
+                  </div>
+
+                  <div class="skilsContainer">
+                    <img
+                      src="assets/icon/Flutter.png"
+                      alt="Flutter"
+                      class="skilsImage"
+                    />
+                    <span class="skilsText">Flutter</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Framework -->
+          </div>
+        </div>
+        <!-- End Skils -->
+      </div>
+      <!-- End Tabs Content -->
+
+      <!-- Footer -->
+      <footer class="flex my-8 justify-center items-center mx-4">
+        <h1 class="md:text-l text-center">
+          © Asep Sobarudin. 2022 All rigths reserved
+        </h1>
+      </footer>
+      <!-- End Footer -->
+
+      <!-- Button Back to top -->
+      <div class="flex justify-center">
+        <a href="#" class="backToTop">
+          <ion-icon name="arrow-up-outline" class="text-3xl"></ion-icon>
+        </a>
+      </div>
+      <!-- End Button Back to top -->
+
+      <!-- Alert -->
+      <div class="relative flex justify-center items-center">
+        <div
+          class="hidden w-auto h-auto p-4 top-4 fixed mx-5 dark:bg-slate-800 rounded-md"
+          id="boxAlert"
+        >
+          <p class="mb-12" id="textAlert"></p>
+          <button
+            class="bg-slate-700 px-4 py-2 absolute bottom-4 right-4 rounded-md dark:hover:bg-slate-800"
+            onclick="CloseAlert()"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+      <!-- End Alert -->
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="dist/js/dark-mode.js"></script>
+    <script type="text/javascript" src="dist/js/tabs-button.js"></script>
+    <script type="text/javascript" src="dist/js/alert.js"></script>
+    <!-- End Javascript -->
+
+  </body>
+</html>
