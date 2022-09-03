@@ -7,6 +7,8 @@ const moon = document.querySelector("#moon");
 
 const labelDarkMode = document.querySelector("#labelDarkMode");
 
+let sunActive = ["ease-in-out", "duration-500", "left-2.5", "animate-pulse-slow", "text-4xl", "text-yellow-400", "absolute", "rotate-180"];
+
 function DarkMode() {
   if (darkMode.checked) {
     html.classList.add("dark");

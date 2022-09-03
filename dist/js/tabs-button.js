@@ -12,20 +12,20 @@ function TabContent() {
     skilsLabel.classList.remove("labelTabsActive");
     portofolioLabel.classList.add("labelTabsActive");
 
-    skilsContent.classList.add("tabsContent");
-    portofolioContent.classList.remove("tabsContent");
-    portofolioContent.classList.add("tabsContentActive");
-    portofolioContent.classList.remove("tabsContentActive");
+    skilsContent.classList.add("hidden");
+    skils.classList.remove("flex");
+    portofolioContent.classList.remove("hidden");
+    portofolioContent.classList.add("flex");
   }
 
   if (skils.checked) {
     portofolioLabel.classList.remove("labelTabsActive");
     skilsLabel.classList.add("labelTabsActive");
 
-    portofolioContent.classList.remove("tabsContentActive");
-    portofolioContent.classList.add("tabsContent");
-    skilsContent.classList.remove("tabsContent");
-    skilsContent.classList.remove("tabsContentActive");
+    portofolioContent.classList.remove("flex");
+    portofolioContent.classList.add("hidden");
+    skilsContent.classList.remove("hidden");
+    skilsContent.classList.add("flex");
   }
 }
 
