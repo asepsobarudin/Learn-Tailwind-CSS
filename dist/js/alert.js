@@ -1,7 +1,6 @@
 const boxAlert = document.querySelector("#boxAlert");
 const textAlert = document.querySelector("#textAlert");
 const textConfirmAlert = document.querySelector("#textConfirmAlert");
-const body = document.querySelector("body");
 
 function BoxAlert(text) {
   confirmAlert.classList.remove("block");
