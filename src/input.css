@@ -10,7 +10,7 @@
   }
 
   .body {
-    @apply selection:bg-slate-300 dark:selection:bg-slate-600 ease-in-out duration-500 bg-slate-200 dark:bg-gradient-to-br dark:from-slate-900 dark:to-[#000000];
+    @apply selection:bg-slate-300 dark:selection:bg-slate-600 ease-in-out duration-500 bg-slate-200 dark:bg-gradient-to-br dark:from-slate-900 dark:to-[#000000] min-h-screen;
   }
 
   .bodyContainer {
